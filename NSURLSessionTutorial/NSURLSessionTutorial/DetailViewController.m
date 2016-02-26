@@ -10,7 +10,12 @@
 #import "AppDelegate.h"
 @interface DetailViewController ()
 @end
-NSString *const kUsername = @"bdAppManiac";
+#warning add yourt user name here.
+/*
+ you can create your username by registering at
+ http://www.geonames.org/login
+ */
+NSString *const kUsername = @"";
 
 @implementation DetailViewController
 
@@ -48,7 +53,7 @@ NSString *const kUsername = @"bdAppManiac";
                 else{
                     NSDictionary *countryDetailsDictionary = [[returnedDict objectForKey:@"geonames"] objectAtIndex:0];
                     
-                    // Set the country name to the respective label.
+                    // Set the country properties to the description label.
                     self.detailDescriptionLabel.text = [NSString stringWithFormat:@"%@ \n\n Json:-\n%@",[self.detailItem description],countryDetailsDictionary.description];
                     
 
